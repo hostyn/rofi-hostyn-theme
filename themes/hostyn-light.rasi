@@ -1,0 +1,93 @@
+/*******************************************************************************
+ * Rofi Theme
+ * A minimalist spotlight based rofi theme (https://github.com/hostyn/rofi-hostyn-theme.git)
+ * User: hostyn
+ * Copyright: hostyn
+ ********************************************************************************/
+
+configuration {
+  display-drun: "";
+  display-window: "";
+  drun-display-format: "{icon} {name}";
+  font: "UbuntuMono NF 25";
+  modi: "window,run,drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+
+
+@theme "/dev/null"
+
+* {
+  bg: #DBDBDB50;
+  fg: #B8B8B8;
+  
+  gb-selected: #DBDBDBA0;
+  fg-selected: #FFFFFF;
+
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 40%;
+  border-radius: 10px;
+}
+
+element {
+  background-color: transparent;
+  padding: 8 5;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @gb-selected;
+  text-color: @fg-selected;
+  border-radius: 10px;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  background-color: transparent;
+  size: 30;
+}
+
+entry {
+  background-color: transparent;
+  padding: 12;
+  text-color: @fg-selected;
+}
+
+inputbar {
+  background-color: transparent;
+  children: [prompt, entry];
+}
+
+listview {
+  background-color: transparent;
+  padding: 8 12;
+  columns: 1;
+  lines: 5;
+}
+
+mainbox {
+  background-color: transparent;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: transparent;
+  enabled: true;
+  padding: 0 5 0 20;
+  text-color: @fg-selected;
+  font: "UbuntuMono NF 45";
+}
